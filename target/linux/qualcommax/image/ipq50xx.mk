@@ -46,6 +46,15 @@ define Device/cmcc_pz-l8
 	PAGESIZE := 2048
 	IMAGE_SIZE := 59392k
 	NAND_SIZE := 128m
+
+	# 关键修改 1：显式指定要生成的镜像类型
+	IMAGES := factory.bin sysupgrade.bin
+
+	# 关键修改 2：定义 factory 镜像的构建规则（适配原厂 U-Boot）
+	IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+
+	# 可选：如果 sysupgrade 需要保留 metadata（推荐）
+	IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += cmcc_pz-l8
 
