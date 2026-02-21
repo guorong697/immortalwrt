@@ -167,6 +167,12 @@ mediatek_setup_interfaces()
 	mediatek,mt7986a-rfb)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4 lan6" "eth1 wan"
 		;;
+
+	*honor,fur-602*)
+		ucidef_set_interfaces_lan_wan "eth0.1" "eth0.2"
+		ucidef_add_switch "switch0" \
+			"1:lan:3" "2:lan:2" "3:lan:1" "0:wan" "6t@eth0"
+		;;
 	mediatek,mt7986b-rfb)
 		ucidef_set_interfaces_lan_wan "lan0 lan1 lan2 lan3 lan4" eth1
 		;;
