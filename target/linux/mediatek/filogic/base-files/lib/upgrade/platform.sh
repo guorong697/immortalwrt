@@ -99,6 +99,7 @@ platform_do_upgrade() {
 	h3c,magic-nx30-pro|\
 	imou,hx21|\
 	jcg,q30-pro|\
+	*honor,fur-602* |\
 	jdcloud,re-cp-03|\
 	konka,komi-a31|\
 	livinet,zr-3020-ubootmod|\
