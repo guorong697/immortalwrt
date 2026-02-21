@@ -46,8 +46,8 @@ define Device/cmcc_pz-l8
 	PAGESIZE := 2048
 	IMAGE_SIZE := 59392k
 	NAND_SIZE := 128m
-	IMAGES += factory.bin 
-	IMAGE/factory.bin := append-ubi
+	IMAGES := factory.img sysupgrade.bin
+	IMAGE/factory.img := append-ubi
 endef
 TARGET_DEVICES += cmcc_pz-l8
 
