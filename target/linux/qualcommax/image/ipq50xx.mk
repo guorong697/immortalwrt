@@ -46,15 +46,8 @@ define Device/cmcc_pz-l8
 	PAGESIZE := 2048
 	IMAGE_SIZE := 59392k
 	NAND_SIZE := 128m
-
-	# 关键修改 1：显式指定要生成的镜像类型
-	IMAGES := factory.bin sysupgrade.bin
-
-	# 关键修改 2：定义 factory 镜像的构建规则（适配原厂 U-Boot）
-	IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
-
-	# 可选：如果 sysupgrade 需要保留 metadata（推荐）
-	IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+	IMAGES += factory.bin 
+	IMAGE/factory.bin := append-ubi
 endef
 TARGET_DEVICES += cmcc_pz-l8
 
@@ -69,7 +62,7 @@ define Device/elecom_wrc-x3000gs2
 	PAGESIZE := 2048
 	IMAGE_SIZE := 52480k
 	NAND_SIZE := 128m
-	IMAGES += factory.bin
+	IMAGES += factory.bin 
 	IMAGE/factory.bin := append-ubi | qsdk-ipq-factory-nand | \
 		mstc-header 4.04(XZF.0)b90 | elecom-product-header WRC-X3000GS2
 	DEVICE_PACKAGES := ath11k-firmware-ipq5018-qcn6122 \
