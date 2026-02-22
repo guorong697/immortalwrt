@@ -38,7 +38,7 @@ TARGET_DEVICES += cmcc_mr3000d-ci
 define Device/cmcc_pz-l8
   $(call Device/FitImageLzma)
   $(call Device/UbiFit)
-  SOC := ipq5000
+  SOC := ipq5018
   DEVICE_VENDOR := CMCC
   DEVICE_MODEL := PZ-L8
   BLOCKSIZE := 128k
