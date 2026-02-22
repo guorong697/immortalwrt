@@ -45,10 +45,7 @@ define Device/cmcc_pz-l8
   PAGESIZE := 2048
   DEVICE_DTS_CONFIG := config@mp02.1
   IMAGES := nand-factory.ubi nand-sysupgrade.bin
-  DEVICE_PACKAGES := \
-	ath11k-firmware-ipq5018 \
-	ath11k-firmware-qcn6122 \
-	ipq-wifi-cmcc_pz-l8
+  DEVICE_PACKAGES := ath11k-firmware-ipq5018-qcn6122
 endef
 TARGET_DEVICES += cmcc_pz-l8
 
