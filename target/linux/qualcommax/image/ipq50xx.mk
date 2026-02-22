@@ -36,18 +36,19 @@ endef
 TARGET_DEVICES += cmcc_mr3000d-ci
 
 define Device/cmcc_pz-l8
-	$(call Device/FitImageLzma)
-	$(call Device/UbiFit)
-	DEVICE_VENDOR := CMCC
-	DEVICE_MODEL := PZ-L8
-	DEVICE_DTS_CONFIG := config@mp02.1
-	SOC := ipq5018
-	BLOCKSIZE := 128k
-	PAGESIZE := 2048
-	IMAGE_SIZE := 59392k
-	NAND_SIZE := 128m
-	IMAGES := factory.img sysupgrade.bin
-	IMAGE/factory.img := append-ubi
+  $(call Device/FitImageLzma)
+  $(call Device/UbiFit)
+  SOC := ipq5000
+  DEVICE_VENDOR := CMCC
+  DEVICE_MODEL := PZ-L8
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  DEVICE_DTS_CONFIG := config@mp02.1
+  IMAGES := nand-factory.ubi nand-sysupgrade.bin
+  DEVICE_PACKAGES := \
+	ath11k-firmware-ipq5018 \
+	ath11k-firmware-qcn6122 \
+	ipq-wifi-cmcc_pz-l8
 endef
 TARGET_DEVICES += cmcc_pz-l8
 
