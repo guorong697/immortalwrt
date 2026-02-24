@@ -524,7 +524,7 @@
 	};
 };
 
-&wifi0 {
+&wifi {
 	// IPQ5000
 	qcom,multipd_arch;
 	qcom,rproc = <&q6_wcss_pd1>;
