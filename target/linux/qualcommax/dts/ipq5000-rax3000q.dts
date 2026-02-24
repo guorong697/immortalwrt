@@ -53,10 +53,6 @@
 	};
 };
 
-&tmc_etr {
-	/delete-property/ memory-region;
-};
-
 &tlmm {
 	blsp_uart0_pins: blsp_uart0_pins {
 		pins =
