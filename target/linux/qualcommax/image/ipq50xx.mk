@@ -59,7 +59,8 @@ define Device/cmcc_rax3000q
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   DEVICE_DTS_CONFIG := config@mp02.1
-  IMAGES := nand-factory.ubi
+  IMAGES := factory.ubi sysupgrade.bin
+  IMAGE/factory.ubi := append-ubi | append-metadata
   DEVICE_PACKAGES := \
 	ath11k-firmware-ipq5018-qcn6122 \
 	ipq-wifi-cmcc_rax3000q
