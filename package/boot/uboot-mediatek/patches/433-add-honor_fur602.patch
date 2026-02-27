@@ -283,7 +283,7 @@
 +			#size-cells = <1>;
 +
 +			partition@0 {
-+				label = "bl2";
++				label = "BL2";
 +				reg = <0x0 0x100000>;
 +			};
 +
@@ -292,19 +292,24 @@
 +				reg = <0x100000 0x80000>;
 +			};
 +
-+			partition@160000 {
-+				label = "factory";
-+				reg = <0x180000 0x200000>;
++			partition@180000 {
++				label = "Factory";
++				reg = <0x180000 0x1e0000>;
++			};
++
++			partition@360000 {
++				label = "Trace";
++				reg = <0x360000 0x20000>;
 +			};
 +
 +			partition@380000 {
-+				label = "fip";
++				label = "FIP";
 +				reg = <0x380000 0x200000>;
 +			};
 +
 +			partition@580000 {
 +				label = "ubi";
-+				reg = <0x580000 0x6c00000>;
++				reg = <0x580000 0x7200000>;
 +			};
 +		};
 +	};
