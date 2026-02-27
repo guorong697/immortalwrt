@@ -2666,10 +2666,10 @@ define Device/openwrt_one
 endef
 TARGET_DEVICES += openwrt_one
 
-define Device/qihoo_360t7
-  DEVICE_VENDOR := Qihoo
-  DEVICE_MODEL := 360T7
-  DEVICE_DTS := mt7981b-qihoo-360t7
+define Device/honor_fur602
+  DEVICE_VENDOR := Honor
+  DEVICE_MODEL := fur602
+  DEVICE_DTS := mt7981b-honor-fur602
   DEVICE_DTS_DIR := ../dts
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
@@ -2686,9 +2686,9 @@ define Device/qihoo_360t7
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
   ARTIFACTS := preloader.bin bl31-uboot.fip
   ARTIFACT/preloader.bin := mt7981-bl2 spim-nand-ddr3
-  ARTIFACT/bl31-uboot.fip := mt7981-bl31-uboot qihoo_360t7
+  ARTIFACT/bl31-uboot.fip := mt7981-bl31-uboot honor_fur602
 endef
-TARGET_DEVICES += qihoo_360t7
+TARGET_DEVICES += honor_fur602
 
 define Device/routerich_ax3000
   DEVICE_VENDOR := Routerich
