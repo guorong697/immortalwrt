@@ -652,11 +652,11 @@ define U-Boot/mt7981_routerich_ax3000
   DEPENDS:=+trusted-firmware-a-mt7981-spim-nand-ddr3
 endef
 
-define U-Boot/mt7981_qihoo_360t7
-  NAME:=Qihoo 360T7
+define U-Boot/mt7981_honor_fur602
+  NAME:=Honor FUR602
   BUILD_SUBTARGET:=filogic
-  BUILD_DEVICES:=qihoo_360t7
-  UBOOT_CONFIG:=mt7981_qihoo-360t7
+  BUILD_DEVICES:=honor_fur602
+  UBOOT_CONFIG:=mt7981_honor-fur602
   UBOOT_IMAGE:=u-boot.fip
   BL2_BOOTDEV:=spim-nand
   BL2_SOC:=mt7981
@@ -1274,7 +1274,7 @@ UBOOT_TARGETS := \
 	mt7981_rfb-sd \
 	mt7981_rfb-snfi \
 	mt7981_routerich_ax3000 \
-	mt7981_qihoo_360t7 \
+	mt7981_honor_fur602 \
 	mt7981_snr_snr-cpe-ax2 \
 	mt7981_xiaomi_mi-router-ax3000t \
 	mt7981_xiaomi_mi-router-wr30u \
