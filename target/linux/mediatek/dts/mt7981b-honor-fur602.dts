@@ -111,9 +111,8 @@
 			#size-cells = <1>;
 
 			partition@0 {
-				label = "bl2";
+				label = "BL2";
 				reg = <0x0000000 0x0100000>;
-				read-only;
 			};
 
 			partition@100000 {
@@ -123,19 +122,22 @@
 
 			factory: partition@180000 {
 				label = "Factory";
-				reg = <0x0180000 0x0200000>;
-				read-only;
+				reg = <0x0180000 0x01e0000>;
+			};
+
+			partition@360000 {
+				label = "Trace";
+				reg = <0x0360000 0x0020000>;
 			};
 
 			partition@380000 {
-				label = "fip";
+				label = "FIP";
 				reg = <0x0380000 0x0200000>;
-				read-only;
 			};
 
 			partition@580000 {
 				label = "ubi";
-				reg = <0x0580000 0x6c00000>;
+				reg = <0x0580000 0x7200000>;
 				compatible = "linux,ubi";
 
 				volumes {
@@ -143,24 +145,6 @@
 						volname = "fit";
 					};
 				};
-			};
-
-			partition@7180000 {
-				label = "config";
-				reg = <0x7180000 0x0100000>;
-				read-only;
-			};
-
-			partition@7280000 {
-				label = "factory";
-				reg = <0x7280000 0x0080000>;
-				read-only;
-			};
-
-			partition@7300000 {
-				label = "log";
-				reg = <0x7300000 0x0700000>;
-				read-only;
 			};
 		};
 	};
