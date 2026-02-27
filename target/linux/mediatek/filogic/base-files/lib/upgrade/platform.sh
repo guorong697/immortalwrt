@@ -112,7 +112,7 @@ platform_do_upgrade() {
 	openwrt,one|\
 	netcore,n60|\
 	netcore,n60-pro|\
-	qihoo,360t7|\
+	honor,fur602|\
 	routerich,ax3000-ubootmod|\
 	routerich,be7200|\
 	snr,snr-cpe-ax2|\
@@ -310,7 +310,7 @@ platform_check_image() {
 	openwrt,one|\
 	netcore,n60|\
 	netcore,n60-pro|\
-	qihoo,360t7|\
+	honor,fur602|\
 	routerich,ax3000-ubootmod|\
 	tplink,tl-7dr7230-v1|\
 	tplink,tl-7dr7230-v2|\
