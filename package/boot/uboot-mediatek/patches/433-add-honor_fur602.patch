@@ -142,7 +142,7 @@
 +/ {
 +	#address-cells = <1>;
 +	#size-cells = <1>;
-+	model = "honor fur602";
++	model = "Honor FUR602";
 +	compatible = "mediatek,mt7981", "mediatek,mt7981-rfb";
 +
 +	chosen {
@@ -272,20 +272,6 @@
 +	tick_dly = <2>;
 +	sample_sel = <0>;
 +
-+&spi0 {
-+	#address-cells = <1>;
-+	#size-cells = <0>;
-+	pinctrl-names = "default";
-+	pinctrl-0 = <&spi_flash_pins>;
-+	status = "okay";
-+	must_tx;
-+	enhance_timing;
-+	dma_ext;
-+	ipm_design;
-+	support_quad;
-+	tick_dly = <2>;
-+	sample_sel = <0>;
-+
 +	spi_nand@0 {
 +		compatible = "spi-nand";
 +		reg = <0>;
@@ -306,8 +292,8 @@
 +				reg = <0x100000 0x80000>;
 +			};
 +
-+			partition@180000 {
-+				label = "Factory";
++			partition@160000 {
++				label = "factory";
 +				reg = <0x180000 0x200000>;
 +			};
 +
