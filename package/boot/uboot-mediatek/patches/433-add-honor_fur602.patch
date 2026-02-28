@@ -297,7 +297,7 @@
 +			#size-cells = <1>;
 +
 +			partition@0 {
-+				label = "BL2";
++				label = "bl2";
 +				reg = <0x0 0x100000>;
 +			};
 +
@@ -312,7 +312,7 @@
 +			};
 +
 +			partition@380000 {
-+				label = "FIP";
++				label = "fip";
 +				reg = <0x380000 0x200000>;
 +			};
 +
