@@ -111,7 +111,7 @@
 			#size-cells = <1>;
 
 			partition@0 {
-				label = "BL2";
+				label = "bl2";
 				reg = <0x0000000 0x0100000>;
 				read-only;
 			};
@@ -128,7 +128,7 @@
 			};
 
 			partition@380000 {
-				label = "FIP";
+				label = "fip";
 				reg = <0x0380000 0x0200000>;
 				read-only;
 			};
