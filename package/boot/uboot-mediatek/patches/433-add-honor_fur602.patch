@@ -272,6 +272,20 @@
 +	tick_dly = <2>;
 +	sample_sel = <0>;
 +
++&spi0 {
++	#address-cells = <1>;
++	#size-cells = <0>;
++	pinctrl-names = "default";
++	pinctrl-0 = <&spi_flash_pins>;
++	status = "okay";
++	must_tx;
++	enhance_timing;
++	dma_ext;
++	ipm_design;
++	support_quad;
++	tick_dly = <2>;
++	sample_sel = <0>;
++
 +	spi_nand@0 {
 +		compatible = "spi-nand";
 +		reg = <0>;
@@ -294,12 +308,7 @@
 +
 +			partition@180000 {
 +				label = "Factory";
-+				reg = <0x180000 0x1e0000>;
-+			};
-+
-+			partition@360000 {
-+				label = "Trace";
-+				reg = <0x360000 0x20000>;
++				reg = <0x180000 0x200000>;
 +			};
 +
 +			partition@380000 {
@@ -309,7 +318,7 @@
 +
 +			partition@580000 {
 +				label = "ubi";
-+				reg = <0x580000 0x7200000>;
++				reg = <0x580000 0x6c00000>;
 +			};
 +		};
 +	};
